@@ -1,4 +1,4 @@
-{% set version = '0.2.1' %}
+{% set version = "0.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sfheaders_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sfheaders/sfheaders_{{ version }}.tar.gz
-  sha256: ae358e835f439927fa82640acdd5e52d2e288607e24b7f3b7d78e60ac23f7d66
+  sha256: 1a602bbad08299816b521069bb04af5c97545f114d5b9730ff31912a5ac19735
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,12 +46,10 @@ test:
 about:
   home: https://dcooley.github.io/sfheaders/
   license: GPL-3
-  summary: Converts between R and Simple Feature 'sf' objects, without depending on the Simple
-    Feature library. Conversion functions are available at both the R level, and through
-    'Rcpp'.
+  summary: Converts between R and Simple Feature 'sf' objects, without depending on the Simple Feature library. Conversion functions are available at both the R level, and through 'Rcpp'.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
