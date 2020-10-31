@@ -3,7 +3,7 @@ About r-sfheaders
 
 Home: https://dcooley.github.io/sfheaders/
 
-Package license: GPL-3
+Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sfheaders-feedstock/blob/master/LICENSE.txt)
 
