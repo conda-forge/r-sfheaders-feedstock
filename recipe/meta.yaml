@@ -1,4 +1,4 @@
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sfheaders_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sfheaders/sfheaders_{{ version }}.tar.gz
-  sha256: 1a602bbad08299816b521069bb04af5c97545f114d5b9730ff31912a5ac19735
+  sha256: e22146b6b7e08c5c4f801ed2bfa4ce89a56372356bd72189667d195981653574
 
 build:
   merge_build_host: true  # [win]
@@ -33,10 +33,12 @@ requirements:
   host:
     - r-base
     - r-rcpp
+    - r-geometries
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-rcpp
+    - r-geometries
 
 test:
   commands:
@@ -45,11 +47,12 @@ test:
 
 about:
   home: https://dcooley.github.io/sfheaders/
-  license: GPL-3
+  license: MIT
   summary: Converts between R and Simple Feature 'sf' objects, without depending on the Simple Feature library. Conversion functions are available at both the R level, and through 'Rcpp'.
-  license_family: GPL3
+  license_family: MIT
   license_file:
-    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+    - LICENSE
 
 extra:
   recipe-maintainers:
