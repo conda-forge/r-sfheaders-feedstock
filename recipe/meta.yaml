@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sfheaders_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sfheaders/sfheaders_{{ version }}.tar.gz
-  sha256: e22146b6b7e08c5c4f801ed2bfa4ce89a56372356bd72189667d195981653574
+  sha256: 86bcd61018a0491fc8a1e7fb0422c918296287b82be299a79ccee8fcb515e045
 
 build:
   merge_build_host: true  # [win]
