@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "0.4.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sfheaders_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sfheaders/sfheaders_{{ version }}.tar.gz
-  sha256: 86bcd61018a0491fc8a1e7fb0422c918296287b82be299a79ccee8fcb515e045
+  sha256: ed9fb934c537fb6f126886f8e5997727de856e32fc3d38911b61a3a83faa7b2c
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -32,13 +32,13 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-rcpp
-    - r-geometries
+    - r-rcpp >=1.0.10
+    - r-geometries >=0.2.2
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-rcpp
-    - r-geometries
+    - r-rcpp >=1.0.10
+    - r-geometries >=0.2.2
 
 test:
   commands:
@@ -57,27 +57,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-
-# Package: sfheaders
-# Type: Package
-# Title: Converts Between R Objects and Simple Feature Objects
-# Date: 2020-03-19
-# Version: 0.2.1
-# Authors@R: c( person("David", "Cooley", ,"david.cooley.au@gmail.com", role = c("aut", "cre")) )
-# Description: Converts between R and Simple Feature 'sf' objects, without depending on the Simple Feature library. Conversion functions are available at both the R level, and through 'Rcpp'.
-# License: GPL-3
-# URL: https://dcooley.github.io/sfheaders/
-# BugReports: https://github.com/dcooley/sfheaders/issues
-# Encoding: UTF-8
-# LazyData: true
-# RoxygenNote: 7.0.2
-# SystemRequirements: C++11
-# LinkingTo: Rcpp
-# Imports: Rcpp
-# Suggests: covr, knitr, testthat
-# NeedsCompilation: yes
-# Packaged: 2020-03-19 09:10:27 UTC; dave
-# Author: David Cooley [aut, cre]
-# Maintainer: David Cooley <david.cooley.au@gmail.com>
-# Repository: CRAN
-# Date/Publication: 2020-03-19 18:30:06 UTC
