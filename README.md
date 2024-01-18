@@ -3,6 +3,7 @@ About r-sfheaders-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sfheaders-feedstock/blob/main/LICENSE.txt)
 
+
 About r-sfheaders
 -----------------
 
@@ -11,6 +12,7 @@ Home: https://dcooley.github.io/sfheaders/
 Package license: MIT
 
 Summary: Converts between R and Simple Feature 'sf' objects, without depending on the Simple Feature library. Conversion functions are available at both the R level, and through 'Rcpp'.
+
 About r-sfheaders
 -----------------
 
@@ -188,7 +190,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
